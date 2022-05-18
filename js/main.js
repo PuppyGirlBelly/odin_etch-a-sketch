@@ -13,8 +13,12 @@ for (y = 0; y < 16; y++) {
     square.className = 'square';
     square.style.display = 'inline-block';
 
-    square.addEventListener('mouseover', () => {
+    square.addEventListener('mouseenter', () => {
       square.style.backgroundColor = '#cecece';
+    });
+
+    square.addEventListener('mouseleave', () => {
+      square.style.backgroundColor = 'unset';
     });
 
     container.append(square);
