@@ -42,7 +42,8 @@ function populatePage() {
   sizeButton.innerText = 'Click to resize/reset';
   sizeButton.addEventListener('click', () => {
     // eslint-disable-next-line no-alert
-    const newSize = prompt('Enter a size for the grid: ', 16);
+    let newSize = prompt('Enter a size for the grid (max 100): ', 16);
+    if (newSize > 100) newSize = 100;
     drawGrid(newSize);
   });
 
