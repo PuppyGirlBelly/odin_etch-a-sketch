@@ -1,6 +1,6 @@
 const container = document.createElement('div');
 container.className = 'container';
-container.style.height = '100vh';
+container.style.height = '100%';
 container.style.display = 'grid';
 container.style.gridTemplateRows = 'repeat(16, 1fr)';
 container.style.gridTemplateColumns = 'repeat(16, 1fr)';
@@ -11,8 +11,12 @@ for (y = 0; y < 16; y++) {
     let square = document.createElement('div');
     square.id = `${x}-${y}`;
     square.className = 'square';
-    square.style.border = '1px solid red';
     square.style.display = 'inline-block';
+
+    square.addEventListener('mouseover', () => {
+      square.style.backgroundColor = '#cecece';
+    });
+
     container.append(square);
   }
 }
