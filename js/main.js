@@ -16,10 +16,6 @@ function createSquare() {
     square.style.backgroundColor = '#cecece';
   });
 
-  square.addEventListener('mouseout', () => {
-    square.style.backgroundColor = 'unset';
-  });
-
   return square;
 }
 
