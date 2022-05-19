@@ -65,7 +65,7 @@ function drawGrid(size) {
 function populatePage() {
   const container = document.createElement('div');
   container.className = 'container';
-  container.style.height = '100vh';
+  container.style.height = '100%';
 
   const sizeButton = document.createElement('button');
   sizeButton.id = 'size_button';
