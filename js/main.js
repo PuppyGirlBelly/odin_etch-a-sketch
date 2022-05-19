@@ -43,8 +43,11 @@ function createSquare() {
 
   square.addEventListener('mouseenter', () => {
     const currentColor = square.style.backgroundColor || 'rgb(255, 255, 255)';
-    // square.style.backgroundColor = randomColor();
-    square.style.backgroundColor = shadeColor(currentColor, -40);
+    if (currentColor === 'rgb(255, 255, 255)') {
+      square.style.backgroundColor = randomColor();
+    } else {
+      square.style.backgroundColor = shadeColor(currentColor, -40);
+    }
   });
 
   return square;
