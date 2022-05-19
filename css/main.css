@@ -55,7 +55,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html, body {
+  height: 98%;
+}
 
+.square {
+  width: 98%;
+  height: 98%;
+  border: 1px solid #cecece;
+  border-radius: 0.2em;
+}
 
 
 

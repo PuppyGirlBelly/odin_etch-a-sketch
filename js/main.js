@@ -1,3 +1,9 @@
+function randomColor() {
+  return `#${(0x1000000 + Math.random() * 0xffffff)
+    .toString(16)
+    .substring(1, 7)}`;
+}
+
 function resetContainer(size) {
   const container = document.querySelector('.container');
   container.textContent = '';
@@ -13,7 +19,7 @@ function createSquare() {
   square.className = 'square';
 
   square.addEventListener('mouseenter', () => {
-    square.style.backgroundColor = '#cecece';
+    square.style.backgroundColor = randomColor();
   });
 
   return square;
